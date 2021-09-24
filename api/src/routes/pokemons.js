@@ -11,8 +11,8 @@ const searchPok = require('../functions/searchPok.jsx');
 
 router.get('/pokemons',async function(req,res){
     try {
-        // let {name, limit, offset} = req.query       
-        let {name} = req.query       
+        let {name, limit, offset} = req.query       
+        // let {name} = req.query       
         let pokemons=[];
         if(name){
             let pokemons = await searchPok(name);
@@ -24,7 +24,7 @@ router.get('/pokemons',async function(req,res){
             if(limit && offset) {
                 pokemons = await getPoks(limit,offset);}
             else  pokemons = await getPoks();
-            // console.log(games.length)
+            console.log(pokemons.length)
             res.send(pokemons)
         }        
     } catch (error){

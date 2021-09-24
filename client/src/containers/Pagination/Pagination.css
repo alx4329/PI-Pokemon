@@ -1,0 +1,115 @@
+/* #bac {  
+    background-color: transparent;
+    
+    height:100%;
+    top:20%
+  }
+  
+  
+  
+  .cards { 
+    
+    width: 98%;
+    position: absolute;
+    height: 80vh;
+    left:-3%;
+    display: flex;  
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;  
+    
+  }
+  
+
+  .Loading{
+    position: relative;
+    display: flex;
+    height: 10rem;
+    width: 15rem;
+  }
+  .card{
+    position: relative;
+    width: 20%;
+    height: 50%;
+  }
+  
+  .container{
+    overflow: scroll;
+    overflow-x: hidden;
+    position: fixed;
+    width: 80%;
+    height: 80vh;
+    left:10%;
+    top:13%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .container::-webkit-scrollbar {     
+    width: 7px;
+      z-index: 3;
+      transition: 0.8s;
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background: #e7c793;
+    border-radius: 5px;
+      z-index: 3;
+  }
+  .container::-webkit-scrollbar-thumb:hover {
+    background: #ff9d00;
+    border-radius: 5px;
+      z-index: 3;
+      
+  }
+  
+  
+  .page-numbers {
+    
+      width: 30%;
+      position:absolute;
+      bottom: 2vh;
+      left: 35%;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      z-index: 3;
+    }
+  
+  .page-numbers > li {
+          flex-direction: row;  
+          background:var(--cultured);  
+          margin-right: 0.3em;
+          color: var(--bdazzled-blue);
+          user-select: none;
+          cursor: pointer;
+          font-size: 1.2rem;
+          font-family: 'Bebas Neue', cursive;
+          width: 1.2rem;
+          display: flex;
+          justify-content: center;
+          z-index: 3;
+        
+  }
+  .page-numbers > li:hover{
+    background-color: var(--silver);
+  }
+  
+  .page-numbers > li:active{
+    color: red;
+    position:relative;
+	  top:1px;
+  }
+
+  .page-numbers > li::selection{
+    background: var(--tumbleweed);
+  }
+  .page-numbers > li  div {
+    width: 1.2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+   */
