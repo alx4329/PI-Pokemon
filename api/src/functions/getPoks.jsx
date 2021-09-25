@@ -39,7 +39,8 @@ getPoks = async function(amount,of){
     await Promise.all(requests)
     
     let dbPokes = await Pokemon.findAll({
-        include:{model: Type, attributes:{exclude:["createdAt","updatedAt"]}, through: {attributes: []} }
+        include:{model: Type, attributes:{exclude:["createdAt","updatedAt"]}, through: {attributes: []} },
+        attributes:{exclude:["createdAt","updatedAt"]}
     });
     let pokemonsToSend = pokemons.concat(dbPokes)
     console.timeEnd('loop')

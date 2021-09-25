@@ -15,7 +15,7 @@ export function Navbar() {
                         
                     </li>
                     <li className="list-item">
-                    <NavLink exact to="/videogames" >Home</NavLink>
+                    <NavLink exact to="/pokemons" >Home</NavLink>
                     
                     </li>
                 </div>

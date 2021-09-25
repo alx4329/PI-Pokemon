@@ -24,7 +24,7 @@ export function Create(){
         defense:'',
         speed:'',
         height:'',
-        weight:maxId,
+        weight:'',
         maxId:maxId,
         types:[],
         newTypes:[],

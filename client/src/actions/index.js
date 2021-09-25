@@ -7,6 +7,7 @@ export const GET_TYPES= 'GET_TYPES'
 export const ORD_ALPH= 'ORD_ALPH'
 export const ORD_ST= 'ORD_ST'
 export const CREATE_POKE= 'CREATE_POKE'
+export const TO_DETAIL= 'TO_DETAIL'
 
 
 
@@ -95,5 +96,17 @@ export function postNewPoke(state){
                 dispatch({ type: CREATE_POKE,
                         payload: json  });
             })
+    }
+}
+
+export function bringPokeToDetail(id){
+    return function(dispatch){
+        return fetch(`http://localhost:3001/pokemon/${id}`)
+            .then(response => response.json())
+                        .then(json => {
+                            console.log(json)
+                            dispatch({ type: TO_DETAIL,
+                            payload: json  });
+                            });
     }
 }

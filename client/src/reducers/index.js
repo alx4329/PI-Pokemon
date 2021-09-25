@@ -1,11 +1,12 @@
 /* eslint-disable array-callback-return */
-import { BRING_POKES, GET_POKES, SEARCH_POKE, FILT_BY_TYPE, GET_TYPES, ORD_ALPH, ORD_ST} from "../actions"; 
+import { BRING_POKES, GET_POKES, SEARCH_POKE, FILT_BY_TYPE, GET_TYPES, ORD_ALPH, ORD_ST, TO_DETAIL} from "../actions"; 
 
 
 export const initialState = {
     allPokes:[],
     pokes:[],
     types:[],
+    pokeDetail:[],
     changes: false
 }
 
@@ -106,6 +107,12 @@ export function rootReducer(state=initialState,action){
                 pokes: pokes,           
                 changes: !state.changes
             }
+        }
+    }
+    if(action.type === TO_DETAIL){
+        return {
+            ...state,
+            pokeDetail: action.payload
         }
     }
 
