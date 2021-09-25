@@ -77,6 +77,7 @@ router.get('/pokemon/:idPokemon', async function(req,res){
 })
 //id, name, life, strength, defense, speed, height, weight
 router.post('/pokemon', async function(req,res){
+    console.log(req.body)
     let { name, life, strength, defense, speed, height, weight, types, newTypes, maxId} = req.body;
     let typesId = [];
     if(types) typesId = types; 

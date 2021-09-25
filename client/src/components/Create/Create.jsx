@@ -32,6 +32,7 @@ export function Create(){
 
    
     
+    // eslint-disable-next-line no-unused-vars
     const [checkedTypes, setCheckedTypes] = useState([]);
 
     const handleTypesOnCheck = (typeId, position) =>{
