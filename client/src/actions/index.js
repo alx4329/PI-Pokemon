@@ -6,6 +6,7 @@ export const FILT_BY_TYPE= 'FILT_BY_TYPE'
 export const GET_TYPES= 'GET_TYPES'
 export const ORD_ALPH= 'ORD_ALPH'
 export const ORD_ST= 'ORD_ST'
+export const CREATE_POKE= 'CREATE_POKE'
 
 
 
@@ -74,5 +75,25 @@ export function orderByStrength(op){
             type: ORD_ST, 
             payload:op
         })
+    }
+}
+
+export function postNewPoke(state){
+    return function(dispatch){
+        let config = {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(state)
+        }
+        return fetch("http://localhost:3001/pokemon",config)
+            .then(response => response.json())
+            .then( json => {
+                console.log(json)
+                dispatch({ type: CREATE_POKE,
+                        payload: json  });
+            })
     }
 }

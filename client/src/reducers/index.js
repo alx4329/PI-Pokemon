@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import { BRING_POKES, GET_POKES, SEARCH_POKE, FILT_BY_TYPE, GET_TYPES, ORD_ALPH, ORD_ST} from "../actions"; 
 
 
@@ -46,7 +47,7 @@ export function rootReducer(state=initialState,action){
     if(action.type === FILT_BY_TYPE){
         const pokes = state.allPokes;
         let filtered = [];
-        // eslint-disable-next-line array-callback-return
+        // eslint-disable-next-line no-unused-vars
         let filtering = pokes.map((poke)=>{
             // eslint-disable-next-line array-callback-return
             poke.types.map((type)=>{

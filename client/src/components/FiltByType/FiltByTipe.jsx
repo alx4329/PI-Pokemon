@@ -1,4 +1,4 @@
-import React, {useE, useEffect} from "react";
+import React, { useEffect} from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { filtByType, getTypes } from "../../actions";
 import './FiltByType.css';
@@ -7,6 +7,7 @@ export function FiltByType(){
     const dispatch = useDispatch(); 
     useEffect(()=>{
         dispatch(getTypes())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
     function handleClick(value){
         dispatch(filtByType(value))
