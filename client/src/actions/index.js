@@ -4,6 +4,8 @@ export const SEARCH_POKE = 'SEARCH_POKE'
 export const BRING_POKES = 'BRING_POKES'
 export const FILT_BY_TYPE= 'FILT_BY_TYPE'
 export const GET_TYPES= 'GET_TYPES'
+export const ORD_ALPH= 'ORD_ALPH'
+export const ORD_ST= 'ORD_ST'
 
 
 
@@ -54,5 +56,23 @@ export function getTypes(){
                     payload:json
                 })
             })
+    }
+}
+
+export function orderByAlphabet(op){
+    return function (dispatch){
+        return dispatch({
+            type: ORD_ALPH,
+            payload:op
+        })
+        }
+    }
+
+export function orderByStrength(op){
+    return function (dispatch){
+        return dispatch({
+            type: ORD_ST, 
+            payload:op
+        })
     }
 }

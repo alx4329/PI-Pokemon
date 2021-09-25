@@ -30,7 +30,8 @@ getPoks = async function(amount,of){
                 name:json.name,
                 id:json.id,
                 img:json.sprites.other.dream_world.front_default|| json.sprites.other.dream_world.front_default ||json.sprites.front_default,
-                types: json.types
+                types: json.types,
+                strength: json.stats[1].base_stat,
             }
             pokemons.push(poke)
         })

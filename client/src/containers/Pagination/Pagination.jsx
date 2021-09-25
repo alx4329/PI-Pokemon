@@ -17,13 +17,14 @@ export function Pagination(props){
         currentPage:(1)
     });
     const pokesRedux = useSelector (state => state.pokes)
+    const changes = useSelector( state => state.changes)
     console.log(pokesRedux)
     
     useEffect(()=>{
         setState({
             currentPage:1
         })
-    },[pokesRedux])
+    },[pokesRedux, changes])
 
     const pokesPerPage = 9;
 

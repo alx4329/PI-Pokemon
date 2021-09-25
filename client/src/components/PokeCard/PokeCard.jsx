@@ -13,6 +13,7 @@ export function PokeCard(Properties){
             <img className='image' src={Properties.Poke.img?Properties.Poke.img:defImg} alt="No image"/>
             <div className="rating">{Properties.Poke.rating}</div> 
             <p>{stringyfyTypes(Properties.Poke.types)}</p>
+            <p>{Properties.Poke.strength}</p>
         </div>
     )
 }

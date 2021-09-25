@@ -10,7 +10,8 @@ async function searchPok(name){
             name:pokemon.name,
             id:pokemon.id,
             img:pokemon.sprites.other.dream_world.front_default|| pokemon.sprites.other.dream_world.front_default ||pokemon.sprites.front_default,
-            types: pokemon.types
+            types: pokemon.types,
+            strength: pokemon.stats[1].base_stat,
         }
         pokemonToSend.push(poke)
         return pokemonToSend;
