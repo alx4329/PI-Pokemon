@@ -1,4 +1,4 @@
-import { GET_POKES, SEARCH_POKE } from "../actions"; 
+import { BRING_POKES, GET_POKES, SEARCH_POKE } from "../actions"; 
 
 export const initialState = {
     allPokes:[],
@@ -22,6 +22,25 @@ export function rootReducer(state=initialState,action){
             pokes:action.payload            
         }
     }
+
+    // if(action.type === BRING_POKES){
+    //     if(action.payload === 'created') {            
+            
+    //     let games = state.AllGames.filter((item)=> (item.createdByUser))
+    //     return {
+    //         ...state,
+    //         Games: games,
+    //         changes: !state.changes
+    //             };
+    //         } else { 
+    //             let games = state.AllGames.filter((item)=> (!item.createdByUser))
+    //             return {
+    //                 ...state,
+    //                 Games: games,
+    //                 changes: !state.changes
+    //                     };
+    //     }
+    // }
     return state;
 }
 

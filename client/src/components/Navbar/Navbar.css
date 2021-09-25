@@ -37,7 +37,7 @@
     align-items: center;
     z-index: 4;
     font-family: 'Bebas Neue', cursive;
-    color: white}
+    color: black}
     
     .list-item a:link{
         color: var(--orange-red);

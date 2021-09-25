@@ -1,6 +1,7 @@
 import fetch from 'node-fetch'
 export const GET_POKES = 'GET_POKES'
 export const SEARCH_POKE = 'SEARCH_POKE'
+export const BRING_POKES = 'BRING_POKES'
 
 
 export function getPokes(pokemon){
@@ -18,10 +19,16 @@ export function getPokes(pokemon){
             return fetch("http://localhost:3001/pokemons")
                 .then(response => response.json())
                 .then(json => {
-                    console.log(json)
+                    // console.log(json)
                     dispatch({ type: GET_POKES,
                     payload: json  });
                     });
         }
     }
 }
+
+export function bringPokes(option){
+    return function(dispatch){        
+                dispatch({ type: BRING_POKES,
+                payload: option });} 
+            }; 

@@ -17,6 +17,7 @@ export function Pagination(props){
         currentPage:(1)
     });
     const pokesRedux = useSelector (state => state.pokes)
+    console.log(pokesRedux)
     
     useEffect(()=>{
         setState({

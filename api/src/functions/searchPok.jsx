@@ -3,6 +3,7 @@ const { Pokemon,Type } = require('../db');
 
 async function searchPok(name){
     let pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+    let pokemonToSend =[];
     if(pokemon.status === 200){
         pokemon = await pokemon.json()
         const poke = {
@@ -11,7 +12,8 @@ async function searchPok(name){
             img:pokemon.sprites.other.dream_world.front_default|| pokemon.sprites.other.dream_world.front_default ||pokemon.sprites.front_default,
             types: pokemon.types
         }
-        return poke;
+        pokemonToSend.push(poke)
+        return pokemonToSend;
     } else{
         let dbPok = await Pokemon.findAll({
             where: {
@@ -21,7 +23,9 @@ async function searchPok(name){
         })
         if (dbPok.length===0) {
             return {error:'not found'}}
-            else return dbPok;
+            else {
+                pokemonToSend.push(dbPok)
+                return pokemonToSend;}
     }
     // console.log(pokemon)
 }
