@@ -25,7 +25,7 @@ router.get('/pokemons',async function(req,res){
                 pokemons = await getPoks(limit,offset);}
             else  pokemons = await getPoks();
             console.log(pokemons.length)
-            res.send(pokemons)
+            res.json(pokemons)
         }        
     } catch (error){
         console.log(error)
@@ -55,7 +55,7 @@ router.get('/pokemon/:idPokemon', async function(req,res){
                 res.send(pokemonToSend)
                 
             } else res.status(404).send({error: error})
-        } else if(/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(idPokemon)){    
+        } else if(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(idPokemon)){    
             let dbPok = await Pokemon.findAll({
                 where: {
                     id: idPokemon

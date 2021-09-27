@@ -7,12 +7,14 @@ export function Sort(){
     const dispatch = useDispatch();
 
     return(
-        <div className="sortBy">
-            <div className="droptbtn" >Sort By</div>
-            <button className="buttonlb" onClick={()=> dispatch(orderByAlphabet('ascending'))}>A-Z</button>
-            <button className="buttonlb" onClick={()=> dispatch(orderByAlphabet('descending'))}>Z-A</button>
-            <button className="buttonlb" onClick={()=> dispatch(orderByStrength('ascending'))}>Strength Up</button>
-            <button className="buttonlb" onClick={()=> dispatch(orderByStrength('descending'))}>Strength Down</button>
+        <div className="dropdown">
+            <button className="dropbtn" >Sort By</button>
+                <div className='dropdown-content'>
+                    <button className="buttonlb" onClick={()=> dispatch(orderByAlphabet('ascending'))}>A-Z</button>
+                    <button className="buttonlb" onClick={()=> dispatch(orderByAlphabet('descending'))}>Z-A</button>
+                    <button className="buttonlb" onClick={()=> dispatch(orderByStrength('ascending'))}>Strength Up</button>
+                    <button className="buttonlb" onClick={()=> dispatch(orderByStrength('descending'))}>Strength Down</button>
+                </div>
         </div>
     )
 }

@@ -1,0 +1,62 @@
+/* .card{
+    position: relative;
+    width: 20%;
+    height: 50%;
+  } */
+
+.card{
+    border: solid red 1px;
+    position: relative;    
+    height: 15rem;    
+    width: 22rem;
+    border-radius: 1.2rem;
+    background:var(--silver);    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow:hidden;
+    font-size: 1.2rem;    
+    margin: 1rem;
+}
+.image{
+    
+    position: absolute;
+    z-index: 0;    
+    border: none;
+    height:  15rem;
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+     object-fit: contain;
+    
+}
+.card-title:link{
+    position: relative;
+    top:-22px;
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: none;
+    display: inline;
+    z-index: 1;
+}
+.card p{
+    z-index: 1;
+    color:white;
+    
+}
+.card:hover p{
+    color:black
+}
+.card:active{
+    position: relative;
+    top:3px
+}
+.card-title:visited{
+    text-decoration: none;
+/* font-family: 'Bebas Neue', cursive; */
+color: var(--orange-red)
+}
+
+

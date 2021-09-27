@@ -1,0 +1,13 @@
+.bar2{
+    position: absolute;
+    height: 8vh;    
+    top:5vh;
+    z-index: 2;
+    background-color:transparent;
+    width: 100%;
+    display: inline-flex;
+    
+    justify-content: space-between;
+    
+    align-items: center;
+}

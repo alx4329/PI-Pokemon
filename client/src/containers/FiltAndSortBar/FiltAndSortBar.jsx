@@ -7,11 +7,11 @@ import Sort from "../../components/Sort/Sort";
 
 export function FiltAndSortBar(){
     return (
-        <div>
-            <Search/>
+        <div className = "bar2">
             <FiltByOrigin/>
-            <FiltByType/>
             <Sort/>
+            <FiltByType/>
+            <Search/>
         </div>
     )
 }

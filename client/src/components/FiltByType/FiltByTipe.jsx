@@ -17,7 +17,7 @@ export function FiltByType(){
 
     const renderTypes =types.map((type,index)=>{
         return(
-            <ul>
+            
                 <button 
                 key={index}
                 onClick = {()=>handleClick(type.name)}
@@ -25,12 +25,16 @@ export function FiltByType(){
                 >
                 {type.name}
                 </button>
-            </ul>
+            
         )
     })
     return(
-        <div>
+        <div className="dropdown">
+            <button className="dropbtn">Type</button>
+            <div className="dropdown-content">
             {renderTypes}
+
+            </div>
         </div>
     )
 

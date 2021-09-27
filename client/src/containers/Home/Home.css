@@ -1,8 +1,9 @@
 .HomeBack{    
-    position: absolute;
+    position: fixed;
+   
     width: 100%;
     height: 100%;
-    /* background-image: url('../../img/LP_pic.jpg'); */
+    background-image: url('../../img/homeBK.jpg');
     background-repeat: no-repeat;    
     background-position: center;
     background-size:cover;

@@ -42,6 +42,7 @@ getPoks = async function(amount,of){
         include:{model: Type, attributes:{exclude:["createdAt","updatedAt"]}, through: {attributes: []} },
         attributes:{exclude:["createdAt","updatedAt"]}
     });
+    console.log(dbPokes)
     let pokemonsToSend = pokemons.concat(dbPokes)
     console.timeEnd('loop')
     return pokemonsToSend

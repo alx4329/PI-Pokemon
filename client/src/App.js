@@ -5,7 +5,7 @@ import {LandingPage} from './containers/LandingPage/LandingPage.jsx';
 import {Home} from './containers/Home/Home.jsx'
 import {Navbar} from './components/Navbar/Navbar.jsx'
 import { Create } from './components/Create/Create';
-import PokeDetail from './components/PokeDetail/PokeDetail';
+import {PokeDetail} from './components/PokeDetail/PokeDetail';
 
 function App() {
   return (
