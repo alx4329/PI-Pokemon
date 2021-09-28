@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { bringPokeToDetail } from '../../actions';
 import './PokeDetail.css';
 import Loading from '../../img/giphy.gif'
-import defImg from '../../img/Ash.png'
+import defImg from '../../img/pokebolaedit.png'
 import { useDispatch, useSelector } from 'react-redux';
 
 export function PokeDetail(props){

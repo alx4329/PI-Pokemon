@@ -7,7 +7,8 @@ export const initialState = {
     pokes:[],
     types:[],
     pokeDetail:[],
-    changes: false
+    changes: false,
+    option:''
 }
 
 export function rootReducer(state=initialState,action){
@@ -15,7 +16,8 @@ export function rootReducer(state=initialState,action){
         return {
             ...state,
             allPokes:action.payload,
-            pokes:action.payload            
+            pokes:action.payload,
+            option:''            
         }
     }
     
@@ -34,14 +36,15 @@ export function rootReducer(state=initialState,action){
         return {
             ...state,
             pokes: pokes,
-            // changes: !state.changes
+            option:''
                 };
             } else { 
                 let pokes = state.allPokes.filter((item)=> !/^[0-9]+$/.test(item))
                 return {
                     ...state,
                     pokes: pokes,
-                    // changes: !state.changes
+                    option:''
+                    
                         };
         }
     }
@@ -57,7 +60,8 @@ export function rootReducer(state=initialState,action){
         })
         return {
             ...state, 
-            pokes:filtered
+            pokes:filtered,
+            option:action.payload
         }
     }
 
@@ -71,21 +75,23 @@ export function rootReducer(state=initialState,action){
     if( action.type === ORD_ALPH){
         let pokes = state.allPokes;     
         
-        if (action.payload=== 'ascending'){
-            let ordered = orderByString(pokes,'name',1);
+        if (action.payload=== 'A-Z'){
+            let ordered = orderByString(pokes,'name',1,true);
             
             
             return {
                 ...state,
                 pokes: ordered,
+                option:'A-Z',
                 changes: !state.changes
             }
         } else {
-            let ordered = orderByString(pokes,'name',-1);
+            let ordered = orderByString(pokes,'name',-1,true);
             
             return {
                 ...state,
                 pokes:ordered,
+                option:'Z-A',
                 changes: !state.changes
             }
         }
@@ -93,18 +99,20 @@ export function rootReducer(state=initialState,action){
 
     if (action.type === ORD_ST){        
         let pokes = state.allPokes;
-        if (action.payload === 'ascending'){
+        if (action.payload === 'SUp'){
             orderByNumber(pokes,'strength',1,true)
             return {
                 ...state,
-                pokes: pokes,           
+                pokes: pokes,
+                option:'Strength Up',           
                 changes: !state.changes
             }}
-        else {            
-            orderByNumber(pokes,'strength',-1,true)
-            return {
+            else {            
+                orderByNumber(pokes,'strength',-1,true)
+                return {
                 ...state,
                 pokes: pokes,           
+                option:'Strength Down',           
                 changes: !state.changes
             }
         }

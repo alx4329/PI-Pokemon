@@ -19,30 +19,38 @@
     font-size: 1.2rem;    
     margin: 1rem;
 }
-.image{
+.cardConteiner{
     
-    position: absolute;
+    position: relative;
+    height: 13rem;
+    width: 22rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.image{    
+    
+    position: relative;
     z-index: 0;    
     border: none;
-    height:  15rem;
+    height:  10rem;
     width: 15rem;
-    display: flex;
-    justify-content: center;
-     object-fit: contain;
+    /* right: -4rem; */
+    bottom:2rem;
+    object-fit:contain; 
     
-}
+} 
 .card-title:link{
     position: relative;
     top:-22px;
     font-size: 1.5rem;
     color: white;
-    font-family: 'Bebas Neue', cursive;
+    /* font-family: 'Bebas Neue', cursive; */
     text-decoration: none;
     display: inline;
     z-index: 1;
 }
-.card p{
-    z-index: 1;
+.card p{ 
     color:white;
     
 }

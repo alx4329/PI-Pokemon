@@ -1,0 +1,7 @@
+.sortBox{
+    display: flex ;
+}
+
+.sortBox p{
+    color: white;
+}
