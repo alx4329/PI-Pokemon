@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {useDispatch} from 'react-redux'
 import { getPokes } from "../../actions";
+import './Search.css'
 
 
 export function Search(){
@@ -17,23 +18,23 @@ export function Search(){
     }
 
     return(
-        <div>
-            <form  onSubmit={(e) =>  handleSubmit(e)}>
-                <div className="form-container" >
         
-            <input
-                type="text"
-                className="searchInput"
-                autoComplete="off"
-                placeholder= "Find a Game"
-                value={pokeToFind}
-                onChange={(e) => handleChange(e)}
-            />
-            <button className="searchButton" type="submit">Search</button>
+        <div className="search-container" >        
+            <form  onSubmit={(e) =>  handleSubmit(e)}>
+                <input
+                    type="text"
+                    className="search-input"
+                    autoComplete="off"
+                    placeholder= "Find your Pokemon..."
+                    value={pokeToFind}
+                    onChange={(e) => handleChange(e)}
+                />
+                <button className="searchButton" type="submit"></button>
+                
+            </form>
 
-                </div>
-        </form>
         </div>
+        
     )
 }
 

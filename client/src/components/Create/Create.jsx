@@ -103,14 +103,14 @@ export function Create(){
                         <div className='col'>
                             <div className="form-group">
                                 <label>Strength:</label>
-                                <input className="input-container" type="number" name = "strength" placeholder="How many years?" value = {state.strength} onChange={(e)=> handleChange(e) }></input>
+                                <input className="input-container" type="number" name = "strength" placeholder="How strong is it?" value = {state.strength} onChange={(e)=> handleChange(e) }></input>
                             </div>
                         </div>
                         
                         <div className='col'>
                             <div className="form-group">
                                 <label>Defense:</label>
-                                <input className="input-container" type="number" name = "defense" placeholder="How many years?" value = {state.defense} onChange={(e)=> handleChange(e) }></input>
+                                <input className="input-container" type="number" name = "defense" placeholder="Can it defense itself?" value = {state.defense} onChange={(e)=> handleChange(e) }></input>
 
                             </div>
                         </div>
@@ -121,14 +121,14 @@ export function Create(){
                         <div className='col'>
                             <div className="form-group">
                                 <label>Speed:</label>
-                                <input className="input-container" type="number" name = "speed" placeholder="How many years?" value = {state.speed} onChange={(e)=> handleChange(e) }></input>
+                                <input className="input-container" type="number" name = "speed" placeholder="How fast?" value = {state.speed} onChange={(e)=> handleChange(e) }></input>
                             </div>
                         </div>
 
                         <div className='col'>
                             <div className="form-group">
                                 <label>Height:</label>
-                                <input className="input-container" type="number" name = "height" placeholder="How many years?" value = {state.height} onChange={(e)=> handleChange(e) }></input>
+                                <input className="input-container" type="number" name = "height" placeholder="How tall?" value = {state.height} onChange={(e)=> handleChange(e) }></input>
 
                             </div>
                         </div>
@@ -139,7 +139,7 @@ export function Create(){
                         <div className='col'>
                             <div className="form-group">
                                 <label>Weight:</label>
-                                <input className="input-container" type="number" name = "weight" placeholder="How many years?" value = {state.weight} onChange={(e)=> handleChange(e) }></input>
+                                <input className="input-container" type="number" name = "weight" placeholder="Is it heavy?" value = {state.weight} onChange={(e)=> handleChange(e) }></input>
 
                             </div>
                         </div>

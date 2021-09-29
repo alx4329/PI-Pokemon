@@ -86,7 +86,7 @@
     transition: all 0.5s;
     }
     .form .row .form-group input::placeholder{
-        color: yellow;
+        color: rgb(247, 247, 115);
     }
     
     

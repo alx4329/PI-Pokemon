@@ -1,18 +1,19 @@
 .bar2{
     position: relative;
-    height: 8vh;    
-    top:5vh;
+    height: 5.5%;    
+    top:5%;
     z-index: 2;
-    background-color:transparent;
+    background-color:#04AA6D;
     width: 100%;
     display: inline-flex;    
     justify-content: space-around;    
     align-items: center;
+    /* border:solid 1px blue; */
+    
 }
 
 .options-container{
     display: flex;
-    border: solid whitesmoke 2px;
     position: absolute;
     left: 2rem;
 }

@@ -1,58 +1,53 @@
-/* .card{
-    position: relative;
-    width: 20%;
-    height: 50%;
-  } */
-
 .card{
     border: solid red 1px;
     position: relative;    
-    height: 15rem;    
+    height: 12rem;    
     width: 22rem;
     border-radius: 1.2rem;
-    background:var(--silver);    
+    background-color: rgba(216, 210, 210, 0.5);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: row;
+    /* align-items: center;
+    justify-content: space-around; */
     overflow:hidden;
     font-size: 1.2rem;    
     margin: 1rem;
 }
-.cardConteiner{
-    
-    position: relative;
-    height: 13rem;
-    width: 22rem;
+.row-card{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
-.image{    
+.column-card{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.column-card p{
+    padding-left: 2rem;
+}
+
+.image-card{    
     
-    position: relative;
+    opacity: none;
+    position: absolute;
     z-index: 0;    
     border: none;
-    height:  10rem;
-    width: 15rem;
-    /* right: -4rem; */
-    bottom:2rem;
+    height:  100%;
+    width: 50%;
     object-fit:contain; 
     
 } 
-.card-title:link{
-    position: relative;
-    top:-22px;
-    font-size: 1.5rem;
-    color: white;
-    /* font-family: 'Bebas Neue', cursive; */
+.link{
     text-decoration: none;
-    display: inline;
-    z-index: 1;
+    font-size: 2rem;
+
 }
+
 .card p{ 
     color:white;
-    
+    text-transform: capitalize;
 }
 .card:hover p{
     color:black
@@ -61,10 +56,6 @@
     position: relative;
     top:3px
 }
-.card-title:visited{
-    text-decoration: none;
-/* font-family: 'Bebas Neue', cursive; */
-color: var(--orange-red)
-}
+
 
 

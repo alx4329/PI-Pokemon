@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { bringPokeToDetail } from '../../actions';
 import './PokeDetail.css';
 import Loading from '../../img/giphy.gif'
-import defImg from '../../img/pokebolaedit.png'
+import defImg from '../../img/AshAndPika.png'
 import { useDispatch, useSelector } from 'react-redux';
 
 export function PokeDetail(props){
@@ -19,12 +19,7 @@ export function PokeDetail(props){
     },[])
 
     let poke = useSelector( state => state.pokeDetail); 
-    // life(pin):60
-    // height(pin):10
-    // weight(pin):130
-    // strength(pin):62
-    // defense(pin):63
-    // speed(pin):60
+    
     if(loading) {
         return(
             <div className = "cardDetail">
@@ -53,7 +48,9 @@ export function PokeDetail(props){
                                     <div>speed: {poke.speed}</div>
                                 </div>
                                 <div className='columna'>
-                                    <div>Types: {stringyfyArray(poke.types,poke.id)}</div>  
+                                    <div>
+                                        {stringyfyArray(poke.types,poke.id)}
+                                    </div>
                                 </div>
                             
                         </div>

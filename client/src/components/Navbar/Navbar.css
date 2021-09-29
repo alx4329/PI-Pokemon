@@ -1,21 +1,22 @@
 
 .navbar {
     position: absolute;
-    height: 5vh;
+    height: 5%;
     width: 100%;
     top: 0;
     left: 0;
-    /* background-color: var(--eerie-black); */
-    background-color: transparent;
+    background-color: #2d6a4fff;
+    /* background-color: transparent; */
     display: flex;
     justify-content: space-between;
     align-items: center;    
     box-sizing: border-box;
     z-index: 4;
+    
 }
 
 .list {
-    margin: 0.75rem;
+    /* margin: 0.75rem; */
     padding: 0;    
     display: flex;
     flex-direction: row;
@@ -56,6 +57,7 @@
 }
 
 .list-item .active{
-    background-color: gray;
+    background-color: #081c15ff;
+    
     border-radius: 20%;
 }

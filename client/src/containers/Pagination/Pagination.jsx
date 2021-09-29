@@ -21,7 +21,9 @@ export function Pagination(props){
     
     
     useEffect(()=>{
-        
+        setState({
+            currentPage:1
+        })
     },[pokesRedux, changes])
 
     const pokesPerPage = 9;
@@ -61,21 +63,21 @@ export function Pagination(props){
         });
         return (
             <div id ='bac'>
-                <ul className='page-numbers'>
-                    {renderPageNumbers}                
-                </ul>
                 <div className='container'>
                     <ul className="cards">
                         {/* eslint-disable-next-line jsx-a11y/alt-text */}
                         <>{currentPokes.length === 0?<img className="Loading" src={Loading}/>: currentPokes.map((Pok)=><PokeCard Poke={Pok}/>)}</>
                     </ul>
                 </div>
+                <div className='page-numbers'>
+                    {renderPageNumbers}                
+                </div>
             </div>
             
         )
     } else {
         return(
-            <div>
+            <div className='not-found'>
                 <p>Pokemon not found</p>
             </div>
         )

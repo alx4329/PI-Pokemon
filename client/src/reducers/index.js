@@ -32,14 +32,14 @@ export function rootReducer(state=initialState,action){
     if(action.type === BRING_POKES){
         if(action.payload === 'created') {            
             
-        let pokes = state.allPokes.filter((item)=> /^[0-9]+$/.test(item))
+        let pokes = state.allPokes.filter((item)=> !/^[0-9]+$/.test(item.id))
         return {
             ...state,
             pokes: pokes,
             option:''
                 };
             } else { 
-                let pokes = state.allPokes.filter((item)=> !/^[0-9]+$/.test(item))
+                let pokes = state.allPokes.filter((item)=> /^[0-9]+$/.test(item.id))
                 return {
                     ...state,
                     pokes: pokes,
@@ -54,9 +54,15 @@ export function rootReducer(state=initialState,action){
         // eslint-disable-next-line no-unused-vars
         let filtering = pokes.map((poke)=>{
             // eslint-disable-next-line array-callback-return
-            poke.types.map((type)=>{
-                if(type.type.name === action.payload) filtered.push(poke)
-            })
+            if(/^[0-9]+$/.test(poke.id)){
+                poke.types.map((type)=>{
+                    if(type.type.name === action.payload) filtered.push(poke)
+                })
+            } else {
+                poke.types.map((type)=>{
+                    if(type.name === action.payload) filtered.push(poke)
+                })
+            }
         })
         return {
             ...state, 

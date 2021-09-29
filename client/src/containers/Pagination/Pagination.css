@@ -1,49 +1,27 @@
 #bac {  
     position: relative;
     background-color: transparent;
-    border: solid 1px white;
-    height:100%;
-    
+    height:92%;
+    top: 5%;
   }
   .container{
-    border: solid 1px yellow;
     overflow: scroll;
     overflow-x: hidden;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    height: 80vh;
-    
-    top:13%;
-    
+    height: 85%;
+    top:0%;
     display: flex;
     justify-content: center;
-    
-  }
-  /* .container::-webkit-scrollbar {     
-    width: 7px;
-      z-index: 3;
-      transition: 0.8s;
   }
   
-  .container::-webkit-scrollbar-thumb {
-    background: #e7c793;
-    border-radius: 5px;
-      z-index: 3;
-  }
-  .container::-webkit-scrollbar-thumb:hover {
-    background: #ff9d00;
-    border-radius: 5px;
-      z-index: 3;
-      
-  } */
   
   
   .cards { 
-    border: solid 1px violet;
     width: 98%;
     position: absolute;
-    height: 80vh;
-    left:-3%;
+    height: 100%;
+    top: 0;
     display: flex;  
     justify-content: center;
     flex-wrap: wrap;
@@ -57,25 +35,26 @@
     display: flex;
     height: 10rem;
     width: 15rem;
+    color: white;
+    justify-content: center;
   }
   
   
   .page-numbers {
-    
       width: 30%;
       position:absolute;
-      bottom: 2vh;
+      bottom: 8%;
       left: 35%;
       list-style: none;
       display: flex;
       flex-direction: row;
       justify-content: center;
-      z-index: 3;
+      
     }
   
   .page-numbers > li {
           flex-direction: row;  
-          background:var(--cultured);  
+          background:white;  
           margin-right: 0.3em;
           color: var(--bdazzled-blue);
           user-select: none;
@@ -89,7 +68,8 @@
         
   }
   .page-numbers > li:hover{
-    background-color: var(--silver);
+    background-color: transparent;
+    color: white;
   }
   
   .page-numbers > li:active{
@@ -107,8 +87,20 @@
     justify-content: center;
   }
 
- 
+  .not-found{
+    position: relative;
+    display: flex;
+    top:30%;
+    width: 100%;
+    /* align-content: center; */
+    font-size: 2rem;
+    justify-content: center;
+  }
+  .not-found p{
+    color: white;
+    background-color: tomato;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
 
-   /* p{
-     color: white;
-   } */
+

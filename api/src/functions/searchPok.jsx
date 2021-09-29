@@ -26,7 +26,7 @@ async function searchPok(name){
             return {error:'not found'}}
             else {
                 pokemonToSend.push(dbPok)
-                return pokemonToSend;}
+                return dbPok;}
     }
     // console.log(pokemon)
 }
