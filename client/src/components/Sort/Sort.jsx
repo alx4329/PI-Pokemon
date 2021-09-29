@@ -26,7 +26,7 @@ export function Sort(){
                 <button className="dropbtn" >Sort By</button>
                     <div className='dropdown-content'>
                         <button className="buttonlb" name="A-Z" onClick={(e)=> handleClick(e)}>A-Z</button>
-                        <button className="buttonlb" name='A-Z' onClick={(e)=> handleClick(e)}>Z-A</button>
+                        <button className="buttonlb" name='Z-A' onClick={(e)=> handleClick(e)}>Z-A</button>
                         <button className="buttonlb" name='SUp' onClick={(e)=> handleClick(e)}>Strength Up</button>
                         <button className="buttonlb" name='SDown' onClick={(e)=> handleClick(e)}>Strength Down</button>
                     </div>

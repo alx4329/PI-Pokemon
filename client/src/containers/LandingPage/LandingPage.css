@@ -7,7 +7,7 @@
     background-color: black;
     background-repeat: no-repeat;
     
-    background-position: bottom;
+    background-position:left;
 }
 
 .inline {
@@ -21,7 +21,8 @@
 }
 
 #welcome{   
-    font-family: 'Bebas Neue', cursive, sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    , cursive, sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
     font-size: 3rem;
     color: white;    
     width: 70%;

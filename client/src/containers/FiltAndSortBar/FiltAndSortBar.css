@@ -1,13 +1,23 @@
 .bar2{
-    position: absolute;
+    position: relative;
     height: 8vh;    
     top:5vh;
     z-index: 2;
     background-color:transparent;
     width: 100%;
-    display: inline-flex;
-    
-    justify-content: space-between;
-    
+    display: inline-flex;    
+    justify-content: space-around;    
     align-items: center;
+}
+
+.options-container{
+    display: flex;
+    border: solid whitesmoke 2px;
+    position: absolute;
+    left: 2rem;
+}
+
+.search{
+    position: absolute;
+    right: 2rem;
 }

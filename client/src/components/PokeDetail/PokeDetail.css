@@ -1,0 +1,92 @@
+    .cardsBackground{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(222,170,35,255)
+    }
+    .imageBK {    
+        position:fixed;
+        width: 100%;
+        height: 100%;    
+        background-image: url('../../img/pikachu.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;    
+    }
+    .cardDetail{
+        position: absolute;
+        width: 50%;
+        height: 80%;
+        right: 6rem;
+        top:4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        border: solid 0.5rem rgba(0, 0, 0, 0.651);
+        box-shadow: 1.25rem 1.25rem 0 rgba(0, 0, 0, 0.3);
+        border-radius: 4rem;
+        background: #666666;
+    }
+    
+    
+    .pokeName {  
+        position: absolute;
+        top:-3rem;        
+        text-transform: capitalize;
+        font-size: 4rem;        
+        color: white;
+    }
+    
+    
+    .details{
+        position: absolute;        
+        height: 85%;
+        width: 100%;
+        bottom: 0%;    
+        font-size: 1.5rem;    
+        color: white;  
+    }
+    
+    .detail-items{
+        position: absolute;
+        width: 100%;
+        height: 30%;        
+        line-height: 1rem;
+        display: flex;
+        text-transform: capitalize;
+        justify-content: space-around;
+    }
+    
+    .columna{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .columna div {
+        background-color: teal;
+        width: auto;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin: .5rem;
+        border: 0.1rem solid white;
+    }
+    .imageContainer{  
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        top: 30%;
+        display: flex;
+        justify-content: center;
+        
+    } 
+    .imageDetail{
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        bottom:  1rem;
+        object-fit: contain;
+        
+    }
+
+    

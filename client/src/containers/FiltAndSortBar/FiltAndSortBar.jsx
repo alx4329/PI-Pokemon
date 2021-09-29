@@ -8,10 +8,14 @@ import Sort from "../../components/Sort/Sort";
 export function FiltAndSortBar(){
     return (
         <div className = "bar2">
-            <FiltByOrigin/>
-            <Sort/>
-            <FiltByType/>
-            <Search/>
+            <div className="options-container">
+                <FiltByOrigin/>
+                <Sort/>
+                <FiltByType/>
+            </div>
+            <div className='search'>
+                <Search/>
+            </div>
         </div>
     )
 }

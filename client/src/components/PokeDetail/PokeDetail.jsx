@@ -19,7 +19,12 @@ export function PokeDetail(props){
     },[])
 
     let poke = useSelector( state => state.pokeDetail); 
-
+    // life(pin):60
+    // height(pin):10
+    // weight(pin):130
+    // strength(pin):62
+    // defense(pin):63
+    // speed(pin):60
     if(loading) {
         return(
             <div className = "cardDetail">
@@ -29,19 +34,37 @@ export function PokeDetail(props){
         )
     } else {
         return(
-            <div className="cardDetail">                    
-                <p className="pokemoName">{poke.name}</p>
-                <div className="details">
-                    <div className="subtitle">
-                        <p>Life: {poke.life}</p>
-                        <p>Strength: {poke.strength}</p>
-                    </div>
-                    <p >Types: {stringyfyArray(poke.types,poke.id)}</p>  
-                </div>                
+            <div className="cardsBackground">
+            <div className='imageBK'>
 
-                <div className="imageContainer">
-                    <img className="imageDetail" src={poke.img? poke.img:defImg}  alt="" />
-                </div>        
+                <div className="cardDetail">                    
+                    <p className="pokeName">{poke.name}</p>
+                    <div className="details">  
+                        <div className="detail-items">
+                            
+                                <div className='columna'>
+                                    <div>Life: {poke.life}</div>
+                                    <div>Strength: {poke.strength}</div>
+                                    <div>height: {poke.height}</div>
+                                </div>
+                                <div className='columna'>
+                                    <div>weight: {poke.weight}</div>
+                                    <div>defense: {poke.defense}</div>
+                                    <div>speed: {poke.speed}</div>
+                                </div>
+                                <div className='columna'>
+                                    <div>Types: {stringyfyArray(poke.types,poke.id)}</div>  
+                                </div>
+                            
+                        </div>
+                        
+                        <div className="imageContainer">
+                            <img className="imageDetail" src={poke.img? poke.img:defImg}  alt="" />
+                        </div>        
+                    </div>                
+
+                </div>
+            </div>
             </div>
         )
     }

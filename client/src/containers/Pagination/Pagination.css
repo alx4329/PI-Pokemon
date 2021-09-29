@@ -1,4 +1,5 @@
 #bac {  
+    position: relative;
     background-color: transparent;
     border: solid 1px white;
     height:100%;
