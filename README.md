@@ -37,59 +37,55 @@ La idea general es crear una aplicación en la cual se puedan ver los distintos 
 
 Rutas:
 
--LandingPage
+    -LandingPage
 
--Ruta Principal, compusta por:
-- [✔️] Input de búsqueda para encontrar pokemons por nombre (La búsqueda será exacta, es decir solo encontrará al pokemon si se coloca el nombre completo)
-- [✔️] Área donde se verá el listado de pokemons. Al iniciar deberá cargar los primeros resultados obtenidos desde la ruta `GET /pokemons` y deberá mostrar su:
-  - Imagen
-  - Nombre
-  - Tipos (Electrico, Fuego, Agua, etc)
-- [✔️] Botones/Opciones para filtrar por tipo de pokemon y por pokemon existente o creado por nosotros
-- [✔️] Botones/Opciones para ordenar tanto ascendentemente como descendentemente los pokemons por orden alfabético y por fuerza
-- [✔️] Paginado para ir buscando y mostrando los siguientes pokemons, 12 pokemons por pagina, mostrando los primeros 9 en la primer pagina.
+    -Ruta Principal, compusta por:
+    - [✔️] Input de búsqueda para encontrar pokemons por nombre (La búsqueda será exacta, es decir solo encontrará al pokemon si se coloca el nombre completo)
+    - [✔️] Área donde se verá el listado de pokemons. Al iniciar deberá cargar los primeros resultados obtenidos desde la ruta `GET /pokemons` y deberá mostrar su:
+      - Imagen
+      - Nombre
+      - Tipos (Electrico, Fuego, Agua, etc)
+    - [✔️] Botones/Opciones para filtrar por tipo de pokemon y por pokemon existente o creado por nosotros
+    - [✔️] Botones/Opciones para ordenar tanto ascendentemente como descendentemente los pokemons por orden alfabético y por fuerza
+    - [✔️] Paginado para ir buscando y mostrando los siguientes pokemons, 12 pokemons por pagina, mostrando los primeros 9 en la primer pagina.
 
 
-__Ruta de detalle de Pokemon__:
-- [✔️] Los campos mostrados en la ruta principal para cada pokemon (imagen, nombre y tipos)
-- [✔️] Número de Pokemon (id)
-- [✔️] Estadísticas (vida, fuerza, defensa, velocidad)
-- [✔️] Altura y peso
+    __Ruta de detalle de Pokemon__:
+    - [✔️] Los campos mostrados en la ruta principal para cada pokemon (imagen, nombre y tipos)
+    - [✔️] Número de Pokemon (id)
+    - [✔️] Estadísticas (vida, fuerza, defensa, velocidad)
+    - [✔️] Altura y peso
 
-__Ruta de creación__:
-- [✔️] Un formulario __controlado__ con los campos mencionados en el detalle del pokemon
-- [✔️] Posibilidad de seleccionar/agregar más de un tipo de pokemon
-- [✔️] Botón/Opción para crear un nuevo pokemon
+    __Ruta de creación__:
+    - [✔️] Un formulario __controlado__ con los campos mencionados en el detalle del pokemon
+    - [✔️] Posibilidad de seleccionar/agregar más de un tipo de pokemon
+    - [✔️] Botón/Opción para crear un nuevo pokemon
 
 #### Base de datos
 
 Entidades:
 
-- [✔️] Pokemon con las siguientes propiedades:
-  - ID (Número de Pokemon) *
-  - Nombre *
-  - Vida
-  - Fuerza
-  - Defensa
-  - Velocidad
-  - Altura
-  - Peso
-- [✔️] Tipo con las siguientes propiedades:
-  - ID
-  - Nombre
+    - [✔️] Pokemon con las siguientes propiedades:
+      - ID (Número de Pokemon) *
+      - Nombre *
+      - Vida
+      - Fuerza
+      - Defensa
+      - Velocidad
+      - Altura
+      - Peso
+    - [✔️] Tipo con las siguientes propiedades:
+      - ID
+      - Nombre
 
 
 #### Backend
 
 Servidor desarrollado en Node/Express con los siguientes endpoints:
 
-- [✔️] __GET /pokemons__:
- 
-- [✔️] __GET /pokemons/{idPokemon}__:
- 
-- [✔️] __GET /pokemons?name="..."__:
-  
-- [✔️] __POST /pokemons__:
-  
-- [✔️] __GET /types__:
- 
+    - [✔️] __GET /pokemons__
+    - [✔️] __GET /pokemons/{idPokemon}__
+    - [✔️] __GET /pokemons?name="..."__ 
+    - [✔️] __POST /pokemons__
+    - [✔️] __GET /types__
+
