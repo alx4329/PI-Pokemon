@@ -4,7 +4,7 @@ import Logo from '../../img/pokemon.png'
 
 import './Navbar.css';
 
-export function Navbar() {
+export function NavBar() {
     return (
         <header className="navbar">
             <img id="logoGames" src={Logo} width="40" height="40" alt="" />
